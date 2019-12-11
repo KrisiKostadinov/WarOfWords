@@ -1,0 +1,49 @@
+﻿:root {
+    --light-color: #FEFFF3;
+    --animation-seconds: 0.2s;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+}
+
+.main-header ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.main-header ul li {
+    padding: 1em;
+    transition: var(--animation-seconds);
+}
+
+.navbar-btn-tnt {
+    background-color: transparent;
+    border: none;
+    color: var(--light-color);
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+}
+
+.navbar-btn-tnt:hover {
+    color: var(--bg-color);
+    background-color: transparent;
+}
+
+.main-header ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--light-color);
+    transition: var(--animation-seconds);
+}
+
+.main-header ul li:hover > a {
+    color: var(--bg-color);
+}
+
+.main-header ul li:hover {
+    background-color: var(--light-color);
+}

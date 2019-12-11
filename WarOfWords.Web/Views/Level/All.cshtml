@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "All";
+}
+
+<link href="~/css/all-levels.css" rel="stylesheet" />
+<h2>Всички нива</h2>
+
+<section class="levels-section">
+    <div class="level">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <p>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </p>
+        }
+        <h2>1</h2>
+    </div>
+    <div class="level">
+        <p>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            }
+        </p>
+        <h2>2</h2>
+    </div>
+</section>

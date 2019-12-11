@@ -1,0 +1,49 @@
+﻿:root {
+    --level-bg-color: #FEFFF377;
+    --level-bg-hover-color: #ffffff;
+    --level-headings-color: #fa4444;
+}
+
+h2 {
+    text-align: center;
+}
+
+.levels-section {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
+    padding: 2em;
+}
+
+.levels-section .level {
+    background-color: var(--level-bg-color);
+    border-radius: 0.7em;
+    cursor: pointer;
+    transition: var(--fast-animation);
+    position: relative;
+    width: auto;
+    height: 16em;
+}
+
+.levels-section .level h2 {
+    color: var(--bg-color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.levels-section .level:hover {
+    background-color: var(--level-bg-hover-color);
+}
+
+.levels-section .level p {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.levels-section .level p i {
+    color: var(--bg-color);
+    font-size: 2em;
+}
