@@ -10,23 +10,31 @@
     <div class="level">
         @if (User.Identity.IsAuthenticated)
         {
-            <p>
-                <i class="far fa-star"></i>
+            <p class="level-content">
+                <i class="fas fa-star"></i>
                 <i class="far fa-star"></i>
                 <i class="far fa-star"></i>
             </p>
         }
-        <h2>1</h2>
+        <p class="level-content footer">
+            <a href="#"><i class="fas fa-users"></i></a><span>20</span> |
+            <a href="#"><i class="fas fa-won-sign"></i></a><span>2</span>
+        </p>
+        <div class="level-play"><a asp-controller="Level" asp-action="Play" asp-route-id="1">1</a></div>
     </div>
     <div class="level">
-        <p>
-            @if (User.Identity.IsAuthenticated)
-            {
+        @if (User.Identity.IsAuthenticated)
+        {
+            <p class="level-content">
                 <i class="fas fa-star"></i>
                 <i class="far fa-star"></i>
                 <i class="far fa-star"></i>
-            }
+            </p>
+        }
+        <p class="level-content footer">
+            <a href="#"><i class="fas fa-users"></i></a><span>20</span> |
+            <a href="#"><i class="fas fa-won-sign"></i></a><span>2</span>
         </p>
-        <h2>2</h2>
+        <div class="level-play"><a asp-controller="Level" asp-action="Play">2</a></div>
     </div>
 </section>

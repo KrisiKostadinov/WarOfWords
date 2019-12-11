@@ -11,39 +11,54 @@ h2 {
 .levels-section {
     margin-top: 2em;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 4fr));
     grid-gap: 2em;
     padding: 2em;
 }
 
 .levels-section .level {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 1 0 25%;
     background-color: var(--level-bg-color);
     border-radius: 0.7em;
-    cursor: pointer;
     transition: var(--fast-animation);
     position: relative;
     width: auto;
     height: 16em;
 }
 
-.levels-section .level h2 {
-    color: var(--bg-color);
+.levels-section .level .level-play {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
+.levels-section .level .level-play a {
+    color: var(--bg-color);
+    text-decoration: none;
+    font-size: 7em;
+}
+
 .levels-section .level:hover {
     background-color: var(--level-bg-hover-color);
 }
 
-.levels-section .level p {
+.levels-section .level .level-content {
     text-align: center;
     padding: 1em 0;
 }
 
-.levels-section .level p i {
+.levels-section .level .level-content i,
+.levels-section .level .level-content span {
     color: var(--bg-color);
     font-size: 2em;
+    margin: 0 0.2em;
+}
+
+.levels-section .level .level-content.footer i,
+.levels-section .level .level-content.footer span {
+    font-size: 1em;
 }
